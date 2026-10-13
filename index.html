@@ -80,6 +80,14 @@
   .dl:hover { filter: brightness(1.08); }
   .dl:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
+  /* ---------- confidentiality note ---------- */
+  .nda {
+    border: 1px solid var(--line); border-left: 3px solid var(--accent);
+    background: var(--surface); border-radius: 8px;
+    padding: 12px 14px; margin: 0 0 28px; font-size: 14.5px; line-height: 1.5; color: var(--ink-2);
+  }
+  .nda b { color: var(--ink); font-weight: 600; }
+
   /* ---------- stat strip ---------- */
   .stats {
     display: grid; grid-template-columns: repeat(3, 1fr);
@@ -112,7 +120,6 @@
   li { margin: 0 0 7px; }
   li::marker { color: var(--accent); }
 
-  /* ---------- skills ---------- */
   /* ---------- project breakdowns ---------- */
   .lead {
     margin: 14px 0 0; font-size: 15px; color: var(--ink-2); line-height: 1.55;
@@ -144,10 +151,6 @@
   }
   .proj p { margin: 0; font-size: 14.5px; line-height: 1.5; }
   .proj p + p { margin-top: 6px; }
-  .pipeline { margin-top: 14px; }
-  .pipeline h4 {
-    font-family: var(--f-body); font-weight: 600; font-size: 14px; margin: 0 0 8px;
-  }
 
   .skillgroup { margin: 14px 0 0; }
   .skillgroup h3 {
@@ -186,18 +189,37 @@
     <div class="contact">
       <a href="mailto:jkadadihimanzano@falcon.bentley.edu">jkadadihimanzano@falcon.bentley.edu</a>
       <a href="tel:+17864985645">+1 (786) 498-5645</a>
+      <a href="https://www.linkedin.com/in/jeankadadihi" target="_blank" rel="noopener">LinkedIn</a>
       <span>Boston, MA</span>
       <a class="dl" href="Jean_Kadadihi_Resume.pdf" download>Download PDF resume</a>
     </div>
   </header>
 
+  <p class="nda"><b>A note on confidentiality.</b> My client work is covered by a non-disclosure agreement that protects my clients' confidential and proprietary information, including their intellectual property. Client names are withheld, figures are rounded, and source code repositories can't be shared. I'm glad to walk through architecture, approach, and results in an interview.</p>
+
   <div class="stats" role="group" aria-label="Selected outcomes">
     <div class="stat"><b>~100</b><small>hrs/week of manual work automated</small></div>
-    <div class="stat"><b>$41.7M</b><small>in over-buying flagged</small></div>
-    <div class="stat"><b>8</b><small>workstreams led</small></div>
+    <div class="stat"><b>$40M+</b><small>in over-buying flagged</small></div>
+    <div class="stat"><b>10+</b><small>systems built for one client</small></div>
   </div>
 
   <h2>Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="role">AI &amp; Automation Consultant</span>
+      <span class="dates">May 2026 &ndash; Present</span>
+    </div>
+    <p class="org"><b>Food &amp; Beverage Importer (Confidential Client)</b> &middot; Miami, FL &middot; Part-time</p>
+    <ul>
+      <li>Lead an automation and BI program for two affiliated food &amp; beverage importers spanning procurement, customs, container logistics, finance, and sales; live systems eliminate 61+ hours of manual work weekly (~1.5 FTE).</li>
+      <li>Presented inventory and working-capital analytics to senior finance leadership, converting executive direction into same-day changes: priced $10M+ of excess stock, set a cash-based weekly purchasing ceiling, and deployed controls withholding $40M+ in forecast-inflated purchase suggestions.</li>
+      <li>Reconciled an eight-figure inventory book to the ERP's actual-cost report to within $15, after tracing a 14x overcount to duplicate item-master records.</li>
+      <li>Analyzed fill efficiency across ~1,500 inbound ocean containers under cube and road-weight constraints, identifying ~60 containers' worth of purchased empty space and per-shipment consolidation opportunities.</li>
+      <li>Automated U.S. customs (ISF) filing preparation and built an independent three-source audit (mailbox, ERP, broker) that verifies every filing ahead of 24-hour deadlines carrying $5,000-per-violation penalties.</li>
+      <li>Built a duties control that checks every customs entry against ERP tariff codes and published Chapter 99 rates, quantifying seven-figure duty paid since GSP lapsed in 2021.</li>
+    </ul>
+  </div>
 
   <div class="entry">
     <div class="entry-head">
@@ -206,23 +228,10 @@
     </div>
     <p class="org"><b>DHL Express</b> &middot; Plantation, FL</p>
     <ul>
-      <li>Designed and built a new AR reporting capability for DHL Express from scratch, delivering aging, UAC, and country/customer reporting through Power Query, Office Scripts (TypeScript), Power Automate, and a custom interactive HTML dashboard.</li>
-      <li>Engineered an automated Statement of Account (SOA) reporting solution for DHL key-account collections, replacing manual statement preparation with a scalable workflow that generated customer-specific reports with automated distribution, saving 8-10 hours per week and advancing AR process digitalization.</li>
-      <li>Partnered with Finance, Collections, and CFSC stakeholders across the Americas region to identify process inefficiencies and deliver automation that returned over 40 hours per week to the AMKAD team while improving reporting accuracy and visibility.</li>
-    </ul>
-  </div>
-
-  <div class="entry">
-    <div class="entry-head">
-      <span class="role">AI &amp; Automation Consultant</span>
-      <span class="dates">2026 &ndash; Present</span>
-    </div>
-    <p class="org"><b>Transnational Foods</b> &middot; Brickell, FL &middot; Part-time</p>
-    <ul>
-      <li>Lead an 8-workstream automation and BI program for two affiliated food &amp; beverage importers spanning procurement, customs, container logistics, and finance; live systems eliminate 61+ hours of manual work weekly (~1.5 FTE).</li>
-      <li>Presented inventory and working-capital analytics to senior finance leadership, converting executive direction into same-day changes: priced $10.7M of excess stock, set a cash-based weekly purchasing ceiling, and deployed controls withholding $41.7M in forecast-inflated purchase suggestions.</li>
-      <li>Analyzed fill efficiency across 1,469 inbound ocean containers under cube and road-weight constraints, identifying ~63 containers' worth of purchased empty space and per-shipment consolidation opportunities.</li>
-      <li>Automated U.S. customs (ISF) filing preparation and built an independent three-source audit (mailbox, ERP, broker) that exposed 35 falsely confirmed filings against 24-hour deadlines carrying $5,000-per-violation penalties.</li>
+      <li>Designed and built a new AR reporting capability from scratch, delivering aging, UAC, and country/customer reporting through Power Query, Office Scripts (TypeScript), Power Automate, and a custom interactive HTML dashboard.</li>
+      <li>Modeled AR in Power BI with 25 DAX measures (DSO, 60/90-day aging) across 14 key accounts in 17 Americas countries, on a parameterized Power Query layer that moves from Excel to SQL Server without rework.</li>
+      <li>Engineered an automated Statement of Account (SOA) workflow that generates and distributes customer-specific reports for key-account collections, saving 8 to 10 hours per week.</li>
+      <li>Partnered with Finance, Collections, and customer finance stakeholders across the Americas to identify process inefficiencies and deliver automation that returned over 40 hours per week to the regional AR team.</li>
     </ul>
   </div>
 
@@ -246,63 +255,53 @@
     </div>
     <p class="org"><b>Mercantil Bank Panama</b> &middot; Panama City, Panama</p>
     <ul>
-      <li>Developed 10+ executive-level analytics reports using Power BI for risk management, compliance, and corporate finance departments.</li>
+      <li>Developed 10+ executive-level Power BI reports for risk management, compliance, and corporate finance departments.</li>
       <li>Engineered SQL databases for insurance and customer acquisition dashboards, processing international client data.</li>
     </ul>
   </div>
 
   <h2>Project Breakdowns</h2>
 
-  <p class="lead">Systems I have put into production return roughly <b>100 hours of manual work per week</b> across these roles: 61+ at Transnational Foods and rising as staged work goes live, and over 40 returned to the AMKAD team at DHL Express, plus deal sourcing at Kumo Capital and payment verification for VerifyPago customers.</p>
+  <p class="lead">Systems I have put into production return roughly <b>100 hours of manual work per week</b> across these roles: 61+ at a food &amp; beverage importer and rising as staged work goes live, and over 40 returned to the Americas AR team at DHL Express, plus deal sourcing at Kumo Capital and payment verification for VerifyPago customers.</p>
 
-  <p class="proj-sub">DHL Express, Finance
-    <small>Three deliverables shipped over one summer inside the Americas AR organization, returning over 40 hours per week to the AMKAD team.</small>
+  <p class="proj-sub">Food &amp; Beverage Importer, AI &amp; Automation Consultant
+    <small>A program spanning two affiliated importers and 10+ systems on one shared stack (Next.js, FastAPI, Postgres, the company ERP). The order is deliberate: automation makes the data live and trustworthy first, then AI reads and acts on it. Client name and exact figures withheld under NDA.</small>
   </p>
 
   <div class="proj">
-    <div class="meta"><span class="st">Shipped</span><span>Power Query</span><span>Office Scripts</span><span>Power Automate</span></div>
-    <h4>AR Reporting Capability</h4>
-    <p>Built DHL Express's new AR reporting from scratch: aging, UAC, and country/customer views assembled with Power Query, Office Scripts (TypeScript), and Power Automate, surfaced in a custom interactive HTML dashboard. Replaced ad-hoc spreadsheet pulls with one automated, refreshable source.</p>
+    <div class="meta"><span class="st">In daily use</span><span>2 companies</span><span>Reconciled to the ERP</span></div>
+    <h4>Procurement &amp; Inventory BI</h4>
+    <p>Orders, containers, inventory, purchasing, and cash flow dashboards running live off each company's ERP. Inventory ties to the ERP's own actual-cost report to within $15 on an eight-figure book, and affiliate sales tie to within 0.001%. Separating a brand worth about half its category stopped brand figures from being overstated roughly 2x.</p>
   </div>
 
   <div class="proj">
-    <div class="meta"><span class="st">Shipped</span><span>Saved 8-10 hrs/wk</span></div>
-    <h4>Statement of Account Automation</h4>
-    <p>Replaced manual preparation of key-account statements with a scalable workflow: customer-specific SOA reports generated and distributed automatically, returning 8-10 hours a week to collections and advancing the AR digitalization roadmap.</p>
+    <div class="meta"><span class="st">In daily use</span><span>$10M+ priced</span><span>$40M+ withheld</span></div>
+    <h4>Working-Capital Controls</h4>
+    <p>After a senior finance review, shipped the requested changes the same afternoon: excess stock priced at $10M+ above target, a value-weighted coverage metric, a cash-based weekly purchasing ceiling, and a days-of-inventory buying guardrail that withholds $40M+ in suggestions driven by inflated manual forecasts.</p>
   </div>
 
   <div class="proj">
-    <div class="meta"><span class="st">40+ hrs/wk returned</span><span>Finance</span><span>Collections</span><span>CFSC</span></div>
-    <h4>Americas Process Improvement</h4>
-    <p>Worked directly with Finance, Collections, and CFSC stakeholders across the Americas region to identify process inefficiencies and turn them into automation. Across the summer this work returned over 40 hours per week to the AMKAD team, alongside gains in reporting accuracy, visibility, and decision-making.</p>
-  </div>
-
-  <p class="proj-sub">Transnational Foods, AI &amp; Automation Consultant
-    <small>An eight-workstream program for two affiliated food &amp; beverage importers; live systems currently return 61+ hours of manual work per week. The order is deliberate: automation makes the data live and trustworthy first, then AI reads and acts on it.</small>
-  </p>
-
-  <div class="proj">
-    <div class="meta"><span class="st">Live</span><span>3-source audit</span><span>15-min cycle</span></div>
+    <div class="meta"><span class="st">Staged</span><span>3-source audit</span><span>15-min cycle</span></div>
     <h4>U.S. Customs (ISF) Filing Automation</h4>
-    <p>Automated preparation and staging of ISF customs filings on a 15-minute cycle, with human release before anything reaches Customs. Built an independent audit that reconciles the filing mailbox, the ERP, and broker records under every reference format a filing can carry; its first sweep exposed 35 filings falsely recorded as confirmed, against 24-hour deadlines carrying $5,000-per-violation penalties.</p>
+    <p>Reads vendor ISF emails and prepares and stages Importer Security Filings (10+2) on a 15-minute cycle, with human release before anything reaches Customs. An independent audit reconciles the filing mailbox, the ERP, and broker records under every reference format a filing can carry. Dating sailings from the ERP alone cut false "sailing with no ISF" alerts by more than half.</p>
   </div>
 
   <div class="proj">
-    <div class="meta"><span class="st">Live</span><span>1,469 containers</span><span>~63 recoverable</span></div>
+    <div class="meta"><span class="st">Live</span><span>Every entry checked</span><span>Since 2018</span></div>
+    <h4>Duties &amp; Tariff Control</h4>
+    <p>Checks every U.S. Customs entry against the ERP's tariff codes and duty and the published USITC Chapter 99 rates. Rebuilt Chapter 99 tariffs paid since 2018 by month, program, and origin to the dollar, and quantified seven-figure full duty paid since GSP lapsed in 2021.</p>
+  </div>
+
+  <div class="proj">
+    <div class="meta"><span class="st">Live</span><span>~1,500 containers</span><span>~60 recoverable</span></div>
     <h4>Container Fill Optimization</h4>
-    <p>Asks one question of every booked inbound container: is it actually full? Across 1,469 containers, 284 came back under-optimized, roughly 63 containers' worth of purchased empty space. Fill is measured against whichever limit binds first, cubic capacity or road weight, so weight-capped boxes are never miscalled half empty.</p>
-  </div>
-
-  <div class="proj">
-    <div class="meta"><span class="st">In daily use</span><span>$10.7M priced</span><span>$41.7M withheld</span></div>
-    <h4>Inventory &amp; Working-Capital Analytics</h4>
-    <p>Stock health, forward inventory value, order status, and purchasing dashboards used daily by both companies. After a senior finance review, shipped the requested changes the same afternoon: excess stock priced at $10.7M above target, a value-weighted coverage metric that corrected a headline figure understating the position by half, a cash-based weekly purchasing ceiling, and buying controls that withhold $41.7M in suggestions driven by inflated manual forecasts.</p>
+    <p>Asks one question of every booked inbound container: is it actually full? Across ~1,500 containers, about one in five came back under-optimized, roughly 60 containers' worth of purchased empty space. Fill is measured against whichever limit binds first, cubic capacity or road weight, so weight-capped boxes are never miscalled half empty.</p>
   </div>
 
   <div class="proj">
     <div class="meta"><span class="st">Live</span><span>2 companies</span><span>Saves 14 hrs/wk</span></div>
     <h4>AP / AR Portal</h4>
-    <p>Vendors submit invoices, approvers review, and AR runs its receivables book, live for both companies on deliberately separated databases. The outstanding book reconciles to the cent against the ERP, past-due balances fell 18.8% in four weeks, and the analytics layer added DSO, lateness depth, customer concentration, and dispute-age measures the ERP never had. Two-factor sign-in is built and tested.</p>
+    <p>Vendors submit invoices and see payment status, approvers review, and AR tracks collections against goal. One codebase runs in four deployments (internal and vendor-facing, for both companies), built to move ~190 emailed vendor invoices a week into one routed queue. The outstanding book reconciles to the cent against the ERP, and the analytics layer adds DSO, lateness depth, customer concentration, and dispute-age measures the ERP never had.</p>
   </div>
 
   <div class="proj">
@@ -312,9 +311,21 @@
   </div>
 
   <div class="proj">
-    <div class="meta"><span class="st">Rolling out</span><span>103 vendors</span><span>83% of volume</span></div>
+    <div class="meta"><span class="st">Pilot</span><span>1,600+ open POs</span><span>200+ suppliers</span></div>
+    <h4>Supplier Ship-Date Portal</h4>
+    <p>Suppliers update the ship date on their own open purchase orders; arrival dates keep their transit time, and slips of more than 10 days alert Purchasing. Replaces a monthly ship-date email chain and manual re-keying into the ERP.</p>
+  </div>
+
+  <div class="proj">
+    <div class="meta"><span class="st">Rolling out</span><span>100+ vendors</span><span>Saves 7 hrs/wk</span></div>
     <h4>Vendor Document Portal</h4>
-    <p>Moving 103 vendors off email attachments onto structured upload folders with originals kept exactly as received, enforced through payment holds. Vendors covering 83% of document volume are through; saves 7 hours a week at current coverage.</p>
+    <p>Moving vendors off email attachments onto structured upload folders, with originals kept exactly as received. Vendors covering most of the document volume are already through.</p>
+  </div>
+
+  <div class="proj">
+    <div class="meta"><span class="st">Daily, 6 am</span><span>15 readers</span><span>2 companies</span></div>
+    <h4>Executive Morning Brief</h4>
+    <p>A daily 6 am email for each company covering sales, inventory, receivables, and industry news, plus a phone app with one login per reader. Inventory figures tie to the ERP's actual-cost report, including stock at sea.</p>
   </div>
 
   <div class="proj">
@@ -324,24 +335,15 @@
   </div>
 
   <div class="proj">
-    <div class="meta"><span class="st">Built</span><span>211 accounts</span></div>
+    <div class="meta"><span class="st">Live</span><span>200+ accounts</span><span>8 reps</span></div>
     <h4>Sales CRM</h4>
-    <p>Stood up a sales CRM for an affiliated brand's team: 211 accounts, the live pipeline, and the sales forecast, gated behind its own sign-in and being matched to invoiced ERP sales for rep-level performance tracking.</p>
+    <p>A shared CRM for an affiliated brand's sales team: accounts, contacts, follow-ups, and rep ownership, with ERP sales synced nightly. Consolidated the book into one place and halved unowned accounts, with named logins and per-rep access.</p>
   </div>
 
   <div class="proj">
-    <div class="meta"><span class="st">Ongoing</span></div>
+    <div class="meta"><span class="st">Ongoing</span><span>7 APIs</span><span>1 task queue</span></div>
     <h4>Platform &amp; Reliability</h4>
-    <p>The unglamorous layer that keeps the rest trustworthy: health checks that name exactly what they verified, scheduled recovery for the reporting stack, isolated per-company databases, version-controlled deployment, and automated checks on every change across the program.</p>
-  </div>
-
-  <div class="pipeline">
-    <h4>Scoping and next up</h4>
-    <div class="chips">
-      <span>Self-filed customs entries</span><span>Vendor QA portal</span><span>Broker commissions</span>
-      <span>Own-brands product portal</span><span>PO &amp; container tracking</span><span>Warehouse capacity</span>
-      <span>Shipping &amp; receiving toolkits</span><span>Cycle counting</span>
-    </div>
+    <p>The layer that keeps the rest trustworthy: one VM running seven app APIs behind secure tunnels, watchdogs that auto-restart services, scheduled jobs, backups, version-controlled deployment, and a kill switch that can take every app offline and restore it from a verified code archive. A single task queue routes feedback from eight apps into one priority list.</p>
   </div>
 
   <h2>Relevant Project</h2>
@@ -353,9 +355,9 @@
     </div>
     <p class="org"><b>Payment verification automation</b> &middot; Founder</p>
     <ul>
-      <li>Developed real-time payment verification SaaS targeting Venezuelan businesses, automating monitoring across Zelle, Binance P2P, and PayPal platforms integrable with WhatsApp and Telegram.</li>
-      <li>Designed comprehensive business model with freemium pricing strategy ($9.99-$49.99 tiers) after conducting market analysis of Venezuelan B2B segment.</li>
-      <li>Invented end-to-end solution reducing manual verification time by 90% for cash-based businesses.</li>
+      <li>Built real-time payment verification SaaS for Zelle, Binance P2P, and PayPal, integrated with WhatsApp and Telegram.</li>
+      <li>Designed a freemium business model ($9.99-$49.99 tiers) after conducting market analysis of the Venezuelan B2B segment.</li>
+      <li>Built an end-to-end solution reducing manual verification time by 90% for cash-based businesses.</li>
     </ul>
   </div>
 
@@ -364,7 +366,7 @@
   <div class="entry">
     <div class="entry-head">
       <span class="role">Bentley University</span>
-      <span class="dates">Class of 2027</span>
+      <span class="dates">Expected May 2027</span>
     </div>
     <p class="org"><b>BS, Data Analytics and Finance</b> &middot; Waltham, MA</p>
     <ul>
@@ -375,19 +377,32 @@
   <h2>Skills &amp; Languages</h2>
 
   <div class="skillgroup">
-    <h3>AI &amp; Automation</h3>
+    <h3>Programming &amp; Data</h3>
     <div class="chips">
-      <span class="hi">Python</span><span class="hi">SQL</span><span>n8n Workflow Automation</span>
-      <span>API Integration</span><span>Azure DB</span><span>Webhook Architecture</span>
-      <span>JavaScript</span><span>HTML</span><span>Prompt Engineering</span><span>Data Scraping</span>
+      <span class="hi">Python</span><span class="hi">SQL</span><span>TypeScript</span><span>JavaScript</span><span>HTML</span>
+      <span>FastAPI</span><span>Next.js</span><span>PostgreSQL</span><span>Supabase</span><span>SQL Server</span><span>Azure</span>
+    </div>
+  </div>
+
+  <div class="skillgroup">
+    <h3>Automation &amp; AI</h3>
+    <div class="chips">
+      <span class="hi">n8n</span><span>Power Automate</span><span>Office Scripts</span><span>APIs &amp; Webhooks</span>
+      <span>LLM Agents (Claude)</span><span>Prompt Engineering</span><span>Data Scraping</span>
     </div>
   </div>
 
   <div class="skillgroup">
     <h3>Analytics &amp; BI</h3>
     <div class="chips">
-      <span class="hi">Power BI</span><span>Microsoft Excel</span><span>Bloomberg Terminal</span>
-      <span>Power Query</span><span>Office Scripts</span><span>Power Automate</span>
+      <span class="hi">Power BI (DAX)</span><span>Power Query</span><span>Microsoft Excel</span><span>Bloomberg Terminal</span>
+    </div>
+  </div>
+
+  <div class="skillgroup">
+    <h3>Deployment</h3>
+    <div class="chips">
+      <span>Vercel</span><span>GitHub</span><span>ngrok</span><span>Scheduled Jobs &amp; Watchdogs</span>
     </div>
   </div>
 
@@ -398,10 +413,10 @@
     </div>
   </div>
 
-  <p class="interests"><b>Interests:</b> BJJ, MMA, UFC, football, basketball, golf, fitness, travel, music, AI coding, video games, volunteering.</p>
+  <p class="interests"><b>Interests:</b> BJJ, MMA, football, basketball, golf, fitness, travel, music, AI coding, volunteering.</p>
 
   <footer>
-    <span>Updated September 2026</span>
+    <span>Updated October 2026</span>
     <span>Boston, MA &middot; open to relocation</span>
   </footer>
 </div>
